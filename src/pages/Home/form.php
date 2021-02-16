@@ -15,7 +15,7 @@ export class App extends React.Component<{}, {}> {
       currentTask: "",
       tasks: [...this.state.tasks, this.state.currentTask],
     });
-  }
+  } 
 
   render() {
     console.log(this.state);

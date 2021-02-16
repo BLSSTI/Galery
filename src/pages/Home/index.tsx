@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         modalOpen={modalOpen}
         portalName="another"
       >
-        <Upload> <PostForm></PostForm> </Upload>
+        <Upload> <Input></Input> </Upload>
       </Modal>
       <Nav>
         <Navlist>
