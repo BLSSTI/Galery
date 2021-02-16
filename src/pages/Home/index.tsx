@@ -3,6 +3,7 @@ import { Title, DivBranca, Nav, Navlist, Divazul, Container, Upload} from "./sty
 import { Link } from "react-router-dom";
 import Modal from "./modal";
 import Input from "./input";
+import PostForm from "../../components/Forms";
 
 const Home: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -13,7 +14,7 @@ const Home: React.FC = () => {
         modalOpen={modalOpen}
         portalName="another"
       >
-        <Upload><Input></Input></Upload>
+        <Upload> <PostForm></PostForm> </Upload>
       </Modal>
       <Nav>
         <Navlist>
