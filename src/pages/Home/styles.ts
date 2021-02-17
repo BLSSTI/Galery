@@ -16,7 +16,11 @@ export const Navlist = styled.ul`
     margin: 30px;
     padding: 0px;
     text-decoration: none;
+    cursor:pointer;
   }
+.navlink{
+  cursor:pointer;
+}
 `;
 
 export const DivBranca = styled.div`
@@ -105,8 +109,9 @@ export const Nav = styled.nav`
   justify-content: left;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 12%;
+  left:0%;
   z-index: 10;
   padding-left: 10%;
 a{
@@ -151,4 +156,11 @@ export const Upload = styled.div`
   display: flex;
   justify-content: center;
  
+`;
+
+export const InputStyle = styled.input`
+input[type="text"]{
+  display:none;
+}
+
 `;

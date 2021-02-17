@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-
 import axios from "axios";
+import {InputStyle} from '../../pages/Home/styles';
 
 function PostForm() {
-  const url = "http://apidev.inema.ba.gov.br/participante";
+
+  
+  const url = "https://apidev.inema.ba.gov.br/participante";
   const [data, setData] = useState({
     nome: "",
     data_foto: "",
@@ -34,7 +36,7 @@ function PostForm() {
 
   async function handle(e) {
 
-    const newdata = { ...data };
+    const newdata = { ...data};
     newdata[e.target.id] = e.target.value;
     setData(newdata);
     console.log(newdata);
@@ -44,7 +46,10 @@ function PostForm() {
     console.log(e.target.files);
     const file = e.target.files[0];
     const base64 = await convertBase64(file);
-    console.log(base64);
+    setData({ ...data, img_base64:base64 })
+
+
+  
   };
 
   const convertBase64 = (file) => {
@@ -61,7 +66,9 @@ function PostForm() {
   };
   return (
     <div>
+
       <form onSubmit={(e) => submit(e)}>
+        <InputStyle>
         <input
           onChange={(e) => handle(e)}
           id="nome"
@@ -93,22 +100,26 @@ function PostForm() {
         <input
           onChange={(e) => uploadImage(e)}
           id="img_base64"
-          value={data.img_base64}
+
           placeholder="img_base64"
           type="file"
         />
         <input
           onChange={(e) => handle(e)}
           id="termo"
-          value={data.termo}
+          value={true}
           placeholder="termo"
           type="radio"
+          required
         />
-
+        </InputStyle>
         <button>Submit</button>
       </form>
+
     </div>
   );
+
+  
 }
 
 export default PostForm;
