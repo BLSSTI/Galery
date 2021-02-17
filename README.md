@@ -15,10 +15,17 @@ Para executar o projeto, será necessário navegar até o diretório do progeto 
 
 ### Rotinas Completas
 
-- [X] Criptografia de imagem para base64
-- [X] Layout Fixo no top
+- [x] Criptografia de imagem para base64
+- [x] Layout Fixo no top
+- [x] Post para API
+- [ ] Permitir apenas Jpeg e png
 
-### Lista ordenada
-1. Listagem ordenada .
+## Página inicial
+![Screenshot_2](https://user-images.githubusercontent.com/53521650/108137951-b8f15e80-709b-11eb-9993-38d9605df3d0.png)
+
+## Dados para API
+
+![dados api](https://user-images.githubusercontent.com/53521650/108138208-39b05a80-709c-11eb-8eee-39e340464772.png)
+
 
 
